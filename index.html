@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto France Academy</title>
+    <meta name="description" content="Maîtrisez les cryptomonnaies en 4 semaines avec un bonus fiscalité. Inscrivez-vous pour 99 € !">
+    <meta name="keywords" content="cryptomonnaies, crypto, formation crypto, bitcoin, ethereum, fiscalité crypto">
+    <meta name="author" content="Delking77">
+    <meta property="og:title" content="Crypto France Academy - Formation Crypto">
+    <meta property="og:description" content="Maîtrisez les cryptomonnaies en 4 semaines avec un bonus fiscalité. Inscrivez-vous pour 99 € !">
+    <meta property="og:image" content="https://delking77.github.io/formation-crypto/favicon.png">
+    <meta property="og:url" content="https://delking77.github.io/formation-crypto/">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="header" role="banner">
+        <h1>Crypto France Academy</h1>
+        <p>Devenez expert en cryptomonnaies – Bonus fiscalité inclus !</p>
+    </header>
+
+    <div class="container" role="main">
+        <div class="section blockchain-theme">
+            <h2>Découvrez l’Univers Blockchain</h2>
+            <div class="blockchain-icons">
+                <i class="fas fa-cube fa-3x blockchain-icon"></i>
+                <i class="fas fa-link fa-3x blockchain-icon"></i>
+                <i class="fas fa-shield-alt fa-3x blockchain-icon"></i>
+            </div>
+            <p>Plongez dans la technologie décentralisée avec notre formation : sécurité, transactions, et fiscalité.</p>
+        </div>
+
+        <div class="section testimonials">
+            <h2>Ce qu'ils en disent</h2>
+            <p class="testimonial">"Formation claire et actionable ! J’ai sécurisé mes fonds rapidement." – Marie D.</p>
+            <p class="testimonial">"Le bonus fiscalité m’a sauvé lors de ma déclaration !" – Paul R.</p>
+        </div>
+
+        <div class="cta">
+            <a href="https://forms.zohopublic.eu/legatiofinancegm1/form/FormationLegatio/formperma/KJFWjeRIKY8UThsXsHJidxiNMAWzhDUYPAJeReZCVbY" class="cta-button">Inscrivez-vous pour 99 € - Places limitées !</a>
+            <div id="countdown" class="countdown">
+                Offre valable encore <span id="timer"></span> !
+            </div>
+        </div>
+    </div>
+
+    <footer role="contentinfo">
+        <p>© 2025 Crypto France Academy - Formez-vous aux cryptos en toute confiance !</p>
+    </footer>
+
+    <script>
+        const endDate = new Date("2025-03-30T23:59:59").getTime();
+        const timer = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = endDate - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById('timer').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById('countdown').innerHTML = "Offre expirée !";
+            }
+        }, 1000);
+
+        const icons = document.querySelectorAll('.blockchain-icon');
+        icons.forEach(icon => {
+            icon.style.animation = 'float 3s ease-in-out infinite';
+        });
+    </script>
+</body>
+</html>
